@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Expense Tracker</h1>
+
+        <!-- Add Expense Form -->
+        <div class="expense-form">
+
+            <input
+                type="text"
+                id="expenseName"
+                placeholder="Expense name"
+                required
+            >
+
+            <input
+                type="number"
+                id="expenseAmount"
+                placeholder="Amount"
+            
+            >
+
+            <select id="expenseCategory">
+                <option value="">Select Category</option>
+                <option value="food">Food</option>
+                <option value="transport">Transport</option>
+                <option value="shopping">Shopping</option>
+                <option value="bills">Bills</option>
+                <option value="other">Other</option>
+            </select>
+
+            <button id="addExpense">Add Expense</button>
+
+        </div>
+
+
+        <!-- Total -->
+        <div class="total-box">
+
+            <h2>Total Expenses</h2>
+
+            <p>Rs. <span id="total">0</span></p>
+
+        </div>
+
+
+        <!-- Expense List -->
+        <div class="expense-section">
+
+            <h2>Expenses</h2>
+
+            <div id="expenseList">
+
+                <!-- JavaScript will add expenses here -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
