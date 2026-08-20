@@ -3,6 +3,7 @@ const addBtn = document.querySelector("#addBtn");
 const todoList = document.querySelector("#todoList");
 const clearBtn = document.querySelector("#clearBtn");
 
+//button for adding task
 addBtn.addEventListener("click", addTodo);
 
 todoInput.addEventListener("keypress", function (event) {
