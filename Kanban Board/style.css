@@ -73,6 +73,12 @@ section .task-column{
   flex-direction: column;
   gap:var(--padding-m);
   border-radius: var(--border-radius-m);
+  transition:all 0.7s cubic-bezier(0.19, 1, 0.22, 1) ;
+}
+section .task-column.hover-over{
+  border:2px dotted var(--primary-text-color );
+  scale: 1.05;
+  
 
 }
 section .task-column .heading{
@@ -89,6 +95,7 @@ section .task-column .task{
      border-radius: var(--border-radius-m);
    display: flex;
    flex-direction: column;
+   cursor: grab;
 
 }
 section .task-column .task button{
