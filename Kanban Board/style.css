@@ -68,6 +68,7 @@ gap:var(--padding-xxl)
 section .task-column{
   background-color: var(--bg-task-color);
   flex-grow: 1;
+  width: 100%;
   padding: var(--padding-l);
   display: flex;
   flex-direction: column;
