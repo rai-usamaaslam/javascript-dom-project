@@ -12,8 +12,10 @@ html{
 }
 :root{
   --background-color:#000000;
+  --bg-task-color:#2a2a2a;
   --bg-button:#1a1a1a;
   --primary-text-color:#f4f4f4;
+  --delete-color:red;
 
   --nav-padding:15px 30px;
   --section-padding:15px 30px;
@@ -22,10 +24,23 @@ html{
   --padding-l:15px;
   --padding-xl:20px;
   --padding-xxl:30px;
+
+  --border-radius-s:5px;
+  --border-radius-m:10px;
+  --border-radius-l:15px;
+  --border-radius-xl:20px;
+  --border-radius-xxl:30px;
+
+
 }
 body{
   background-color: var(--background-color);
   color: var(--primary-text-color);
+}
+main{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 nav{
   display: flex;
@@ -40,5 +55,51 @@ nav button{
   outline:none;
   padding: var(--padding-m) var(--padding-l);
   cursor: pointer;
+}
+section{
+
+padding: var(--section-padding);
+display: flex;
+flex-grow: 1; /*it will cover the remaing main part of main */
+justify-content: space-between;
+gap:var(--padding-xxl)
+}
+
+section .task-column{
+  background-color: var(--bg-task-color);
+  flex-grow: 1;
+  padding: var(--padding-l);
+  display: flex;
+  flex-direction: column;
+  gap:var(--padding-m);
+  border-radius: var(--border-radius-m);
+
+}
+section .task-column .heading{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+section .task-column .task{
+  background-color: var(--bg-button);
+  padding: var(--padding-m);
+   gap:var(--padding-s);
+     border-radius: var(--border-radius-m);
+   display: flex;
+   flex-direction: column;
+
+}
+section .task-column .task button{
+  align-self: flex-end;
+  cursor: pointer;
+  padding: var(--padding-s) var(--padding-m);
+  border-radius: var(--border-radius-s);
+  border: none;
+  outline: none;
+  background-color: var(--delete-color);
+  color: var(--primary-text-color);
+
 
 }
