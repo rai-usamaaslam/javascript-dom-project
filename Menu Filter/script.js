@@ -67,7 +67,7 @@ filterButtons.forEach(function (button) {
       displayProducts(products);
       return;
     }
-    const filteredProducts = products.filter(function (product) {
+    const filteredProducts = products.filter( function (product) {
       return product.category === category;
     });
     displayProducts(filteredProducts);
@@ -77,8 +77,8 @@ filterButtons.forEach(function (button) {
 searchInput.addEventListener("input", function () {
   const searchValue = searchInput.value.toLowerCase();
 
-  const searchedProducts = products.filter(function (product) {
-    return product.name.toLowerCase().includes(searchValue);
+  const searchedProducts = products.filter(product => ( 
+    return product.name.toLowerCase().includes(searchValue)));
   });
 
   displayProducts(searchedProducts);
