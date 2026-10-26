@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image Editor</title>
+  <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="theme.css">
 </head>
@@ -23,9 +27,28 @@
           <button class="btn">Reset</button>
           <button class="btn">Download</button>
         </div>
-        <div class="bottom"></div>
+        <div class="bottom">
+          <div class="placeholder">
+            <i class="ri-file-image-line"></i>
+            <p>No image Chosen</p>
+          </div>
+        </div>
       </div>
-      <div class="right"></div>
+      <div class="right">
+        <h2>Filter</h2>
+        <div class="filters">
+          <div class="filter">
+          <p>Brightness</p>
+        <input type="range"
+         min="0"
+        max="200"
+        value="100"
+        name="brightness" >
+      </div>
+        </div>
+        
+        </div>
+        
     </section>
   </main>
   <script src="script.js"></script>
