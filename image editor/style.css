@@ -115,4 +115,5 @@ margin-top: -8.5px;
 canvas{
   max-width: 90%;
   max-height: 80vh ;
+  display: none;
 }
