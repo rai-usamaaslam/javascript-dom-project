@@ -1,4 +1,7 @@
 const filterContainer=document.querySelector('.filters')
+const imageCanvas=document.querySelector('.image-canvas')
+const imageInput=document.querySelector('#image-input')
+const canvasCtx=imageCanvas.getContext('2d');
 const filters={
   brightness:{
     value:100,
@@ -81,8 +84,25 @@ function createFilterElement(name,unit="%",value,min,max){
   return div;
 
 }
-
 Object.keys(filters).forEach( key => {
   const filterElem = createFilterElement(key,filters[key].unit,filters[key].value,filters[key].min,filters[key].max);
   filterContainer.appendChild(filterElem);
+})
+
+imageInput.addEventListener('change',(dets)=>{
+
+  const file = dets.target.files[ 0 ];
+  const placeholder=document.querySelector('.placeholder');
+  placeholder.style.display='none';
+  const img= new Image();
+  img.src=URL.createObjectURL(file);
+
+
+  img.onload=()=>{ 
+    
+    imageCanvas.width=img.width;
+    imageCanvas.height=img.height;
+    canvasCtx.drawImage(img,0,0)
+  }
+
 })
