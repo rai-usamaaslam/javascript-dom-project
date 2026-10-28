@@ -6,5 +6,29 @@
 html,body{
   height: 100%;
   width: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  
+}
+html{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: var(--bg-primary-color);
+color: var(--text-primary-color);
+}
+main section{
+  height: 100%;
+  width: 100%;
+}
+section{
+  padding: var(--padding-xl);
+}
+section .infos{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .infos .info{
+  padding: var(--padding-sm) var(--padding-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
 }
