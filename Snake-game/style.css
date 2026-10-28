@@ -1,34 +1,61 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html,body{
-  height: 100%;
+
+html,
+body {
   width: 100%;
-  
-  
+  min-height: 100%;
 }
-html{
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background-color: var(--bg-primary-color);
-color: var(--text-primary-color);
+
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-primary-color);
+  color: var(--text-primary-color);
 }
-main section{
-  height: 100%;
+
+main {
+  min-height: 100vh;
+}
+
+main section {
   width: 100%;
+  min-height: 100vh;
+  padding: var(--padding-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--bg-primary-color);
 }
-section{
-  padding: var(--padding-xl);
-}
-section .infos{
+
+section .infos {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
-section .infos .info{
+
+section .infos .info {
   padding: var(--padding-sm) var(--padding-md);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-lg);
+}
+
+.board {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  flex: 1;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
+}
+
+.block {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border-color);
 }
