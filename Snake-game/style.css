@@ -52,3 +52,6 @@ section .infos .info {
   
   border: 1px solid var(--border-color);
 }
+.fill{
+  background-color: rgb(236, 180, 165);
+}
