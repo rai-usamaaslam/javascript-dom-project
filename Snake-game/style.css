@@ -55,3 +55,6 @@ section .infos .info {
 .fill{
   background-color: rgb(236, 180, 165);
 }
+.food{
+  background-color: brown;
+}
